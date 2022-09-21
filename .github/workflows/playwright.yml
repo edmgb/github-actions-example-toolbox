@@ -15,6 +15,10 @@ jobs:
         node-version: '14.x'
     - name: Install dependencies
       run: npm ci
+    - name: Checkout repository
+      uses: actions/checkout@master
+    - name: Checkout submodules
+      uses: https://github.com/mits-gossau/web-components-toolbox.git@master
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests

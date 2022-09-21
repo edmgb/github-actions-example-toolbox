@@ -20,4 +20,4 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test --config=src/es/components/web-components-toolbox/e2e/
+      run: live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/es/components/web-components-toolbox/e2e/ && killall node

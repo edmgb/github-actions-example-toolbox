@@ -24,6 +24,7 @@ const config = {
   /* Run your local server before starting the tests */
   webServer: {
     command: 'npm run serve',
+    port: 4200,
     reuseExistingServer: true
   }
 }

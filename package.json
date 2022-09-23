@@ -6,7 +6,7 @@
   "scripts": {
     "fix": "standard --fix",
     "serve": "live-server --port=4200 --host=localhost --no-css-inject",
-    "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test  && killall node"
+    "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/e2e/ && killall node"
   },
   "author": "weedshaker@gmail.com, edx.mgb@gmail.com",
   "license": "MIT",

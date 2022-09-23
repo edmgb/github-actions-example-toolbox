@@ -2,6 +2,9 @@
 const { devices } = require('@playwright/test')
 
 const config = {
+  fullyParallel: true,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
   reporter: 'line',
   use: {
     baseURL: 'http://localhost:2200',
